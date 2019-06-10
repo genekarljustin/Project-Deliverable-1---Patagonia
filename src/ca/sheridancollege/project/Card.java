@@ -14,6 +14,25 @@ package ca.sheridancollege.project;
 public abstract class Card 
 {
     //default modifier for child classes
+    public enum Colour {RED, YELLOW, GREEN, BLUE};
+        public enum Rank{ZERO, ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, 
+        NINE, WILDCARD, DRAWFOUR, DRAWTWO, SKIP, REVERSE};
+        private final Colour colour;
+        private final Rank rank;
+        
+        public Card(Colour c, Rank gRan)
+        {
+           colour =c;
+           rank= gRan;
+        }
+	public Rank getRank() {
+		return this.rank;
+	}
+
+	
+	public Colour getColour() {
+		return this.colour;
+        }
     
     /**
      * Students should implement this method for their specific children classes 
